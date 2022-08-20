@@ -108,7 +108,7 @@ class SnakeEnv():
         sys.exit()
 
 
-snake_env = SnakeEnv(600, 600)
+snake_env = SnakeEnv(400, 400)
 difficulty = 20
 fps_controller = pygame.time.Clock()
 

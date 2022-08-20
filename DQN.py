@@ -14,19 +14,6 @@ env = gym.make('snake:Snake-v0')
 
 env.reset()
 
-"""
-for _ in range(1000):
-    env.render("human")
-    action = env.action_space.sample()
-    observation, reward, done, info = env.step(action)
-    if done:
-        print("Episode finished after {} timesteps".format(_ + 1))
-        break
-    time.sleep(0.1)
-env.close()
-
-"""
-
 nb_actions = env.action_space.n
  
 IMG_SHAPE = (84, 84)
@@ -74,6 +61,6 @@ checkpoint_weights_filename = 'dqn_snake_weights_{step}.h5f'
 checkpoint_callback = ModelIntervalCheckpoint(checkpoint_weights_filename, interval=100000)
 
 
-dqn.fit(env, nb_steps=100000, visualize=False, verbose=1, callbacks=[checkpoint_callback])
+dqn.fit(env, nb_steps=1000000, visualize=False, verbose=1, callbacks=[checkpoint_callback])
 
 dqn.save_weights(weights_filename, overwrite=True)
