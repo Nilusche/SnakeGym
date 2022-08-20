@@ -2,5 +2,16 @@
 
 run ```pip install -e snake``` to register the environment <br>
 
-if you want to play the game snake by yourself just run snake_game_raw.py
-a
+If you want to play the game snake by yourself just run snake_game_raw.py <br>
+
+## Action space
+```
+0 = UP
+1 = DOWN
+2 = LEFT
+3 = RIGHT
+
+```
+
+
+DQN.py contains a Deep Q-Learning Solution to an agent that learns through a Convolutional Neural Network. <br>
