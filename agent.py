@@ -47,7 +47,7 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(nb_actions, activation='linear')
 ])
 
-model.load_weights("dqn_snake_weights_1100000.h5f")
+model.load_weights("dqn_snake_weights_1300000.h5f")
 memory = SequentialMemory(limit=1000000, window_length=WINDOW_LENGTH)
 processor = ImageProcessor()
 policy = LinearAnnealedPolicy(EpsGreedyQPolicy(), attr='eps', value_max=1., value_min=.1, value_test=.05, nb_steps=100000)
@@ -55,6 +55,6 @@ dqn = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmu
 dqn.compile(tf.keras.optimizers.Adam(lr=.00025), metrics=['mae'])
 
 
-env.sleep = 0.2
+env.sleep = 0.1
 ## Test agent
 dqn.test(env, nb_episodes=1, visualize=True)

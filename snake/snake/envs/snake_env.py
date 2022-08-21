@@ -125,7 +125,7 @@ class SnakeEnv(gym.Env):
     def update_game_state(self):
         self.screen.fill(BLACK)
         for pos in self.snake_body:
-            pygame.draw.rect(self.screen, RED, pygame.Rect(pos[0], pos[1], 10, 10))
+            pygame.draw.rect(self.screen, GREEN, pygame.Rect(pos[0], pos[1], 10, 10))
         
         pygame.draw.rect(self.screen, WHITE, pygame.Rect(self.food_pos[0], self.food_pos[1], 10, 10))
 
