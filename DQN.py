@@ -50,7 +50,7 @@ model = tf.keras.models.Sequential([
 
 memory = SequentialMemory(limit=1000000, window_length=WINDOW_LENGTH)
 processor = ImageProcessor()
-policy = LinearAnnealedPolicy(EpsGreedyQPolicy(), attr='eps', value_max=1., value_min=.1, value_test=.05, nb_steps=1000000)
+policy = LinearAnnealedPolicy(EpsGreedyQPolicy(), attr='eps', value_max=1., value_min=.1, value_test=.05, nb_steps=1500000)
 dqn = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmup=50000, target_model_update=10000, policy=policy, processor=processor, gamma=.99, train_interval=4, delta_clip=1.)
 dqn.compile(tf.keras.optimizers.Adam(lr=.00025), metrics=['mae'])
 
@@ -61,6 +61,6 @@ checkpoint_weights_filename = 'dqn_snake_weights_{step}.h5f'
 checkpoint_callback = ModelIntervalCheckpoint(checkpoint_weights_filename, interval=100000)
 
 
-dqn.fit(env, nb_steps=1000000, visualize=False, verbose=1, callbacks=[checkpoint_callback])
+dqn.fit(env, nb_steps=1500000, visualize=False, verbose=1, callbacks=[checkpoint_callback])
 
 dqn.save_weights(weights_filename, overwrite=True)
