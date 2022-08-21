@@ -1,5 +1,8 @@
 # SnakeGym
 
+![pygame](https://user-images.githubusercontent.com/73897941/185812982-e6c2109c-3c6d-4cd4-854f-21c51031c870.gif)
+
+
 run ```pip install -e snake``` to register the environment <br>
 
 If you want to play the game snake by yourself just run snake_game_raw.py <br>
