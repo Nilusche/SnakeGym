@@ -8,9 +8,9 @@ from rl.memory import SequentialMemory
 from rl.core import Processor
 import numpy as np
 import tensorflow as tf
+import snake
 
-
-env = gym.make('snake:Snake-v0')
+env = gym.make('Snake-v0')
 
 env.reset()
 

@@ -21,7 +21,7 @@ class SnakeEnv(gym.Env):
 
     metadata = {'render.modes': ['human']}
 
-    def __init__(self):
+    def __init__(self, sleep=0):
         self.action_space = spaces.Discrete(4)
         self.frame_size_x = 200
         self.frame_size_y = 200
@@ -29,7 +29,7 @@ class SnakeEnv(gym.Env):
         # Reset the game
         self.reset()
         self.STEP_LIMIT = 1000
-        self.sleep = 0
+        self.sleep = sleep
     
     def reset(self):
         self.screen.fill(BLACK)

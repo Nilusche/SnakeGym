@@ -8,10 +8,12 @@ from rl.memory import SequentialMemory
 from rl.core import Processor
 import numpy as np
 import tensorflow as tf
+from gym.envs.registration import register
+import snake
 
+register(id='SnakeSlow-v0', entry_point='snake.envs:SnakeEnv',kwargs={'sleep': 0.1})
 
-env = gym.make('snake:Snake-v0')
-
+env = gym.make('SnakeSlow-v0')
 env.reset()
 
 nb_actions = env.action_space.n
@@ -55,6 +57,6 @@ dqn = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmu
 dqn.compile(tf.keras.optimizers.Adam(lr=.00025), metrics=['mae'])
 
 
-env.sleep = 0.1
+
 ## Test agent
 dqn.test(env, nb_episodes=1, visualize=True)
