@@ -8,7 +8,7 @@ from rl.memory import SequentialMemory
 from rl.core import Processor
 import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
+
 
 env = gym.make('snake:Snake-v0')
 
