@@ -1,9 +1,10 @@
 # SnakeGym
 
+I spend a while learning about Reinforcement Learning and Deep Q-Learning. <br> I implemented a SnakeGym openai environment and trained a DQN agent to play the game. <br> The agent was able to play the game with after 1.3 Million training episodes (took 12 hours to train and still is not optimal). For the future I will look into implementing asynchrounous training algorithms.
+
+
 ## Quick link to Software Requirement Specification
 [SRS](SnakeGym_Software_Requirements_Specification.pdf)
-
-I spend a while learning about Reinforcement Learning and Deep Q-Learning. <br> I implemented a SnakeGym openai environment and trained a DQN agent to play the game. <br> The agent was able to play the game with after 1.3 Million training episodes (took 12 hours to train and still is not optimal). For the future I will look into implementing asynchrounous training algorithms.
 
 ## Setup
 Run ```pip install -e snake``` to register the environment.<br>
