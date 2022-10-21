@@ -1,4 +1,8 @@
 # SnakeGym
+![snake](https://user-images.githubusercontent.com/73897941/197170398-388c2de4-9da1-427f-8df7-dcf61cae930d.gif)
+
+
+
 
 I spend a while learning about Reinforcement Learning and Deep Q-Learning. <br> I implemented a SnakeGym openai environment and trained a DQN agent to play the game. <br> The agent was able to play the game with after 1.3 Million training episodes (took 12 hours to train and still is not optimal). For the future I will look into implementing asynchrounous training algorithms.
 
