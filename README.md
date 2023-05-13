@@ -1,5 +1,5 @@
 # SnakeGym
-
+![snake](https://user-images.githubusercontent.com/73897941/197170398-388c2de4-9da1-427f-8df7-dcf61cae930d.gif)
 
 
 
